@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BEKE Turboice</title>
+  <meta name="description" content="BEKE Turboice: a 30,000-puff disposable with a ceramic coil, crystal clear tank and 19 ice-forward flavors. For adult nicotine users only.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gated">
+
+  <!-- Age verification -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__card">
+      <div class="lang lang--gate" role="group" aria-label="Language">
+        <button data-lang="en">EN</button><button data-lang="zh">中文</button><button data-lang="id">ID</button>
+      </div>
+      <img src="assets/logo-dark.png" alt="BEKE Turboice" class="gate__logo">
+      <h1 id="gate-title" data-i18n="gate.title">Are you 21 or older?</h1>
+      <p data-i18n="gate.body">This website is for adult nicotine users of legal age only. You must be 21 or older (or the legal age where you live, if higher) to enter.</p>
+      <div class="gate__actions">
+        <button class="btn btn--ink" id="gate-yes" data-i18n="gate.yes">Yes, I am 21+</button>
+        <button class="btn btn--ghost" id="gate-no" data-i18n="gate.no">No, exit</button>
+      </div>
+      <p class="gate__warn" data-i18n-html="warn"><strong>WARNING:</strong> This product contains nicotine. Nicotine is an addictive chemical.</p>
+      <p class="gate__denied" id="gate-denied" data-i18n="gate.denied" hidden>Sorry, you must be of legal age to view this site.</p>
+    </div>
+  </div>
+
+  <!-- Nicotine warning (persistent) -->
+  <div class="warning" role="note" data-i18n-html="warn">
+    <strong>WARNING:</strong> This product contains nicotine. Nicotine is an addictive chemical.
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" aria-label="BEKE Turboice"><img src="assets/logo-dark.png" alt="BEKE Turboice"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#device" data-i18n="nav.device">Device</a>
+      <a href="#flavors" data-i18n="nav.flavors">Flavors</a>
+      <a href="#film" data-i18n="nav.film">Film</a>
+      <a href="#pack" data-i18n="nav.pack">Packaging</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <a href="#responsible" data-i18n="nav.resp">Responsible use</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><button data-lang="zh">中文</button><button data-lang="id">ID</button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">BEKE Turboice · Disposable</p>
+        <h1 class="hero__title" data-i18n-html="hero.title">Cold, clear<br>and built to last.</h1>
+        <p class="hero__cn" lang="zh">一口心飞扬 · 满口果留香</p>
+        <p class="hero__lede" data-i18n="hero.lede">Up to 30,000 puffs from a FEELM Turbo ceramic coil, a crystal clear tank you can read at a glance, and nineteen ice-forward flavors, each rated for sweetness and coolness so you know what to expect.</p>
+        <div class="hero__cta">
+          <a href="#flavors" class="btn btn--ink" data-i18n="hero.cta1">Explore 19 flavors</a>
+          <a href="#device" class="btn btn--ghost" data-i18n="hero.cta2">The device</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__halo"></div>
+        <img src="assets/features/hero-cola.jpg" alt="" class="hero__dev hero__dev--back">
+        <img src="assets/features/hero-device.jpg" alt="" class="hero__dev hero__dev--front">
+      </div>
+    </section>
+
+    <!-- Key specs -->
+    <section class="specs" aria-label="Key specifications">
+      <div class="spec"><span class="spec__num" data-i18n="spec.n.puffs">30,000</span><span class="spec__label" data-i18n="spec.puffs">Puffs, up to</span></div>
+      <div class="spec"><span class="spec__num">650<small>mAh</small></span><span class="spec__label" data-i18n="spec.battery">Battery</span></div>
+      <div class="spec"><span class="spec__num">14<small>W</small></span><span class="spec__label" data-i18n="spec.output">Output</span></div>
+      <div class="spec"><span class="spec__num" data-i18n-html="spec.n.liquid">12.3<small>mL</small></span><span class="spec__label" data-i18n="spec.liquid">E-liquid</span></div>
+      <div class="spec"><span class="spec__num">3<small>%</small></span><span class="spec__label" data-i18n="spec.nic">Nicotine (Miami Mint 4%)</span></div>
+    </section>
+
+    <!-- Device -->
+    <section class="device" id="device">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="device.eyebrow">The device</p>
+        <h2 data-i18n="device.title">Engineered for a consistent draw, puff after puff.</h2>
+      </div>
+      <div class="bento">
+        <article class="tile tile--wide">
+          <div class="tile__text">
+            <h3 data-i18n="coil.t">FEELM Turbo ceramic coil</h3>
+            <p data-i18n="coil.p">A ceramic heating core designed to keep flavor and vapor volume consistent, up to 95%, from the first puff to the last.</p>
+          </div>
+          <img src="assets/features/coil.jpg" alt="" loading="lazy">
+        </article>
+        <article class="tile tile--tall">
+          <div class="tile__text">
+            <h3 data-i18n="tank.t">Crystal clear tank</h3>
+            <p data-i18n="tank.p">A transparent upper tank shows the e-liquid level at a glance.</p>
+          </div>
+          <img src="assets/features/tank.jpg" alt="" loading="lazy">
+        </article>
+        <article class="tile tile--stat">
+          <span class="tile__big">650<small>mAh</small></span>
+          <h3 data-i18n="bat.t">Rechargeable battery</h3>
+          <p data-i18n="bat.p">Sized to carry the full 12.3 mL through to the end.</p>
+        </article>
+        <article class="tile tile--wide tile--dark">
+          <div class="tile__text">
+            <h3 data-i18n="ripple.t">Curved ripple design</h3>
+            <p data-i18n="ripple.p">A soft, flowing wave divides the clear tank from the frosted body, with a shape that sits comfortably in the hand.</p>
+          </div>
+          <img src="assets/features/ripple.jpg" alt="" loading="lazy">
+        </article>
+        <article class="tile tile--stat">
+          <span class="tile__led" aria-hidden="true"></span>
+          <h3 data-i18n="led.t">Dynamic LED light</h3>
+          <p data-i18n="led.p">A light bar on the front responds as you draw.</p>
+        </article>
+        <article class="tile tile--stat">
+          <span class="tile__levels" aria-hidden="true"><i></i><i></i><i></i></span>
+          <h3 data-i18n="lvl.t">3-level display</h3>
+          <p data-i18n="lvl.p">A simple three-step indicator on the side of the device.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Flavors -->
+    <section class="flavors" id="flavors">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="fl.eyebrow">Flavor index</p>
+        <h2 data-i18n="fl.title">Nineteen flavors, each rated for sweetness and coolness.</h2>
+        <p class="section-head__sub" data-i18n="fl.sub">Scale 0 to 10. Tap a flavor to see its full card.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="chips" role="group">
+          <button class="chip is-active" data-filter="all"><b data-i18n="fl.all">All</b> <span>19</span></button>
+          <button class="chip" data-filter="fruit" data-i18n="fl.fruit">Fruit</button>
+          <button class="chip" data-filter="tea" data-i18n="fl.tea">Tea</button>
+          <button class="chip" data-filter="drink" data-i18n="fl.drink">Drinks &amp; classics</button>
+          <button class="chip" data-filter="mint" data-i18n="fl.mint">Mint</button>
+        </div>
+        <label class="sort">
+          <span data-i18n="sort.label">Sort</span>
+          <select id="sort">
+            <option value="no" data-i18n="sort.no">Number</option>
+            <option value="cool" data-i18n="sort.cool">Coolest first</option>
+            <option value="sweet" data-i18n="sort.sweet">Sweetest first</option>
+            <option value="light" data-i18n="sort.light">Least sweet first</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="grid" id="grid"></div>
+
+      <div class="legend">
+        <span><i class="dot dot--cool"></i><span data-i18n="legend.cool">Coolness</span></span>
+        <span><i class="dot dot--sweet"></i><span data-i18n="legend.sweet">Sweetness</span></span>
+        <a href="assets/flavor-profile.jpg" target="_blank" rel="noopener" data-i18n="legend.dl">Download the full flavor profile chart</a>
+      </div>
+    </section>
+
+    <!-- Film -->
+    <section class="film" id="film">
+      <div class="section-head section-head--light">
+        <p class="eyebrow" data-i18n="film.eyebrow">Film</p>
+        <h2 data-i18n="film.title">See Turboice in motion.</h2>
+      </div>
+      <div class="film__frame">
+        <video controls muted playsinline preload="metadata" poster="assets/features/ripple.jpg">
+          <source src="assets/promo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <!-- Packaging -->
+    <section class="pack" id="pack">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="pack.eyebrow">Packaging</p>
+        <h2 data-i18n="pack.title">A clear box that shows what is inside.</h2>
+        <p class="section-head__sub" data-i18n="pack.sub">Every box carries the flavor's coolness and sweetness gauges, capacity and puff count, plus the 21+ mark.</p>
+      </div>
+      <div class="pack__row">
+        <figure><img src="assets/pack/greem-grape-ice.png" alt="" loading="lazy"><figcaption data-flavor="01">Green Grape Ice</figcaption></figure>
+        <figure><img src="assets/pack/mineral-water.png" alt="" loading="lazy"><figcaption data-flavor="06">Mineral Water</figcaption></figure>
+        <figure><img src="assets/pack/watermelon-ice.png" alt="" loading="lazy"><figcaption data-flavor="13">Watermelon Ice</figcaption></figure>
+        <figure><img src="assets/pack/raw-cola-ice.png" alt="" loading="lazy"><figcaption data-flavor="05">Raw Cola Ice</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="contact__card">
+        <div class="contact__copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Buy or distribute</p>
+          <h2 data-i18n="contact.title">Interested in BEKE? Let's talk.</h2>
+          <p data-i18n="contact.body">Whether you're a buyer or want to become a BEKE distributor, call us or send a WhatsApp message.</p>
+        </div>
+        <div class="contact__actions">
+          <a class="contact__phone" href="tel:+60102064096">+60 10-206 4096</a>
+          <div class="contact__btns">
+            <a class="btn btn--wa" data-wa="contact.wa.buy" href="https://wa.me/60102064096" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
+              <span data-i18n="contact.buy">WhatsApp to buy</span>
+            </a>
+            <a class="btn btn--light" data-wa="contact.wa.dist" href="https://wa.me/60102064096" target="_blank" rel="noopener" data-i18n="contact.dist">Become a distributor</a>
+            <a class="btn btn--light" href="tel:+60102064096" data-i18n="contact.call">Call us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsible use -->
+    <section class="responsible" id="responsible">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="resp.eyebrow">Responsible use</p>
+        <h2 data-i18n="resp.title">For adult nicotine users only.</h2>
+      </div>
+      <ul class="rules">
+        <li data-i18n-html="r1"></li>
+        <li data-i18n-html="r2"></li>
+        <li data-i18n-html="r3"></li>
+        <li data-i18n-html="r4"></li>
+        <li data-i18n-html="r5"></li>
+        <li data-i18n-html="r6"></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo-light.png" alt="BEKE Turboice" class="footer__logo">
+    <p class="footer__contact"><span data-i18n="foot.contact">Sales &amp; distribution:</span> <a href="tel:+60102064096">+60 10-206 4096</a> · <a data-wa="contact.wa.buy" href="https://wa.me/60102064096" target="_blank" rel="noopener">WhatsApp</a></p>
+    <p class="footer__warn" data-i18n-html="warn"><strong>WARNING:</strong> This product contains nicotine. Nicotine is an addictive chemical.</p>
+    <p class="footer__small" data-i18n="foot.small">Specifications are nominal; puff count varies with usage. Product availability and nicotine strength vary by market and are subject to local law. © 2026 BEKE. All rights reserved.</p>
+  </footer>
+
+  <!-- Flavor lightbox -->
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lb-close" aria-label="Close">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lb-prev" aria-label="Previous">‹</button>
+    <img id="lb-img" alt="">
+    <button class="lightbox__nav lightbox__nav--next" id="lb-next" aria-label="Next">›</button>
+  </dialog>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
